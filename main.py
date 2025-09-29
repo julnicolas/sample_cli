@@ -8,10 +8,12 @@ app = typer.Typer()
 
 @app.command()
 def status(env: Env):
+    """Show deployment metadata for specified environment"""
     print(f"environment: {env.value}")
 
 @app.command()
-def deploy(env: Env):
+def rollback(env: Env):
+    """Rollback specified environment"""
     print(f"environment: {env.value}")
 
 if __name__ == "__main__":
